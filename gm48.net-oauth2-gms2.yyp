@@ -1,9 +1,9 @@
 {
   "resources": [
-    {"id":{"name":"callback_test","path":"scripts/callback_test/callback_test.yy",},"order":1,},
-    {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},"order":0,},
-    {"id":{"name":"gm48_oauth2","path":"scripts/gm48_oauth2/gm48_oauth2.yy",},"order":0,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"callback_example","path":"scripts/callback_example/callback_example.yy",},"order":1,},
+    {"id":{"name":"gm48_oauth2_controller","path":"objects/gm48_oauth2_controller/gm48_oauth2_controller.yy",},"order":0,},
+    {"id":{"name":"gm48_oauth2_library","path":"scripts/gm48_oauth2_library/gm48_oauth2_library.yy",},"order":0,},
+    {"id":{"name":"room_example","path":"rooms/room_example/room_example.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -19,7 +19,7 @@
     "children": [],
   },
   "RoomOrder": [
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+    {"name":"room_example","path":"rooms/room_example/room_example.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -48,7 +48,7 @@
     "IDEVersion": "2.3.0.529",
   },
   "resourceVersion": "1.3",
-  "name": "gm48-oauth2-test",
+  "name": "gm48.net-oauth2-gms2",
   "tags": [],
   "resourceType": "GMProject",
 }
