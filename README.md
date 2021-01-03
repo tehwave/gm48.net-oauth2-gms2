@@ -33,6 +33,8 @@ See [CONTRIBUTING](CONTRIBUTING.md) for details on how to contribute.
 - [Peter Jørgensen](https://github.com/tehwave)
 - [All Contributors](../../contributors)
 
+Based on [reddit-OAuth2](https://github.com/JujuAdams/reddit-OAuth2) by [Juju Adams](https://github.com/JujuAdams).
+
 ## License
 
 [MIT License](LICENSE)
