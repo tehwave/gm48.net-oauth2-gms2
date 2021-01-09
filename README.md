@@ -1,8 +1,6 @@
-👷‍♂️👷‍♀️ Work-in-progress
-
 # gm48.net-oauth2-gms2
 
-Utilize gm48.net OAuth2 in GameMaker Studio 2
+Utilize official gm48.net OAuth2 in GameMaker Studio 2
 
 ## Requirements
 
@@ -25,7 +23,7 @@ gm48_oauth2_init("CLIENT ID", "CLIENT SECRET");
 
 The `CLIENT ID` and and `CLIENT SECRET` values must be replaced with your credentials.
 
-These values are made available to you when you create a leaderboard for your game.
+These values are made available to you when you create the first leaderboard for your game.
 
 **Step**
 ```gml
