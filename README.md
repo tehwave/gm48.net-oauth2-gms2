@@ -58,7 +58,7 @@ gm48_oauth2_authorize(callback);
 
 You must provide a script resource to execute when the authorization has finished.
 
-See the [`callback_example`](scripts/callback_example/callback_example.gml) script resource provided.
+See the [`scr_callback_example`](scripts/scr_callback_example/scr_callback_example.gml) script resource provided.
 
 Once successfully authorized, you now have an Access token stored in the ```gm48_oauth2_access_token``` global variable.
 
