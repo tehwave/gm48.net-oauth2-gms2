@@ -1,6 +1,6 @@
-# gm48.net-oauth2-gms2
+# gm48.net OAuth2 for GameMaker Studio 2
 
-Utilize official gm48.net OAuth2 in GameMaker Studio 2
+Utilize official gm48.net OAuth2 account authentication in GameMaker Studio 2
 
 ## Requirements
 
