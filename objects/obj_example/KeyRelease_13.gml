@@ -1,0 +1,1 @@
+gm48_oauth2_authorize(scr_callback_example);

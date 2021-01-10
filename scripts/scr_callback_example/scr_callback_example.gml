@@ -1,5 +1,6 @@
-function callback_example(){
-	gm48_oauth2_debug(
+function scr_callback_example()
+{
+	gm48_debug(
 		"Callback example called.",
 		global.gm48_oauth2_auth_code,
         global.gm48_oauth2_access_token,

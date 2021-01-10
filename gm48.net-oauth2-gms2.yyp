@@ -1,7 +1,7 @@
 {
   "resources": [
-    {"id":{"name":"callback_example","path":"scripts/callback_example/callback_example.yy",},"order":1,},
-    {"id":{"name":"gm48_oauth2_controller","path":"objects/gm48_oauth2_controller/gm48_oauth2_controller.yy",},"order":0,},
+    {"id":{"name":"scr_callback_example","path":"scripts/scr_callback_example/scr_callback_example.yy",},"order":1,},
+    {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"order":0,},
     {"id":{"name":"gm48_oauth2_library","path":"scripts/gm48_oauth2_library/gm48_oauth2_library.yy",},"order":0,},
     {"id":{"name":"room_example","path":"rooms/room_example/room_example.yy",},"order":0,},
   ],
@@ -18,8 +18,8 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrder": [
-    {"name":"room_example","path":"rooms/room_example/room_example.yy",},
+  "RoomOrderNodes": [
+    {"roomId":{"name":"room_example","path":"rooms/room_example/room_example.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -38,16 +38,16 @@
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
-    {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.0.529",
+    "IDEVersion": "2.3.1.542",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "gm48.net-oauth2-gms2",
   "tags": [],
   "resourceType": "GMProject",

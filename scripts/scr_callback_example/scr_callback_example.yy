@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "callback_example",
+  "name": "scr_callback_example",
   "tags": [],
   "resourceType": "GMScript",
 }

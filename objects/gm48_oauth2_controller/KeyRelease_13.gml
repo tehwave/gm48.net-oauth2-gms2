@@ -1,1 +1,0 @@
-gm48_oauth2_authorize(callback_example);
