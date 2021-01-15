@@ -72,6 +72,14 @@ Once successfully authorized, you now have an Access token stored in the ```gm48
 
 You must use token for authentication to the gm48.net API, and as such, the online leaderboard functionality.
 
+### Retrieving information about the authenticated user
+
+The authenticated user information is available via an GET request to `https://gm48.net/api/v4/user/me`.
+
+This library does not currently have any functionality out-of-the-box to help you retrieve this information.
+
+That's on the 📝 TODO list.
+
 ### Scores & Leaderboards
 
 Please refer to the [gm48.net Leaderboards for GameMaker Studio 2 repository](https://github.com/tehwave/gm48.net-leaderboards-gms2) for implementation.
