@@ -48,6 +48,14 @@ Download the repository and open the project file in GameMaker Studio 2.
 
 The project will not work out-of-the-box, as the Client ID and Secret credentials provided are not real.
 
+### Why is YYC (YoYo Compiler) required?
+
+The YYC is required as GameMaker Studio games exported without the YYC can, to some degree, be reverse-engineered.
+
+That would make it possible to extract the sensitive Client ID and Secret credentials from your game.
+
+Note that nothing in the gm48.net API allows sensitive or personal user account information to be retrieved or updated.
+
 ## Usage
 
 Ask the player for authorization to use their gm48.net account.
