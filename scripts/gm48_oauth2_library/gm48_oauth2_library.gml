@@ -252,6 +252,11 @@ function gm48_oauth2_refresh_access_token()
     return requestId;
 }
 
+function gm48_oauth2_authenticated_user()
+{
+    // TODO
+}
+
 /* --------------------------------
 
 Localhost server.
