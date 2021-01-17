@@ -25,6 +25,8 @@ The `CLIENT ID` and and `CLIENT SECRET` values must be replaced with your creden
 
 These values are made available to you when you create the first leaderboard for your game.
 
+You may create the leaderboard via gm48.net Dashboard > Games > (your game) > Leaderboards.
+
 **Step**
 ```gml
 gm48_oauth2_keepalive();
