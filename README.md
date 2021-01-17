@@ -52,9 +52,13 @@ The project will not work out-of-the-box, as the Client ID and Secret credential
 
 ### Why is YYC (YoYo Compiler) required?
 
-The YYC is required as GameMaker Studio games exported without the YYC can, to some degree, be reverse-engineered.
+You should export your game using YYC (YoYo Compiler) to avoid involuntary disclosure of sensitive information from your game.
 
-That would make it possible to extract the sensitive Client ID and Secret credentials from your game.
+Games compiled without using the YYC may be reverse-engineered. That would make it possible to extract the sensitive Client ID and Secret credentials from your game.
+
+As games can't be updated past the game jam's deadline, once the sensitive information has been made public, action will be taken to prevent any further access to the gm48.net API via your game.
+
+You should therefore ensure that your game takes loss of connection to the gm48.net API into account, and provide any necessary error handling as such.
 
 Note that nothing in the gm48.net API allows sensitive or personal user account information to be retrieved or updated.
 
@@ -72,7 +76,7 @@ See the [`scr_callback_example`](scripts/scr_callback_example/scr_callback_examp
 
 Once successfully authorized, you now have an Access token stored in the ```gm48_oauth2_access_token``` global variable.
 
-You must use token for authentication to the gm48.net API, and as such, the online leaderboard functionality.
+You must use the token for authentication to the gm48.net API. The official libraries takes care of this part for you.
 
 ### Retrieving information about the authenticated user
 
