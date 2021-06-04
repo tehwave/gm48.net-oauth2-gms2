@@ -196,7 +196,7 @@ function gm48_oauth2_exchange_auth_code()
 	request[? "body"] = body;
 	request[? "method"] = "POST";
 
-	ds_map_add(global.gm48_oauth2_requests, requestId, request);
+	gm48_add_oauth2_request(requestId, request);
 
 	// Update our step in the process.
     global.gm48_oauth2_state = GM48_OAUTH2_STATE.EXCHANGING_AUTH_CODE;
@@ -239,7 +239,7 @@ function gm48_oauth2_refresh_access_token()
 	request[? "body"] = body;
 	request[? "method"] = "POST";
 
-	ds_map_add(global.gm48_oauth2_requests, requestId, request);
+	gm48_add_oauth2_request(requestId, request);
 
 	// Update our step in the process.
     global.gm48_oauth2_state = GM48_OAUTH2_STATE.REFRESHING_ACCESS_TOKEN;
@@ -307,7 +307,7 @@ function gm48_oauth2_http()
 		return;
 	}
 
-	var request = ds_map_find_value(global.gm48_oauth2_requests, requestId);
+	var request = gm48_get_oauth2_request(requestId);
 
 	if (is_undefined(request)) {
 		gm48_debug("HTTP request is not of OAuth2 variant.", requestId);
@@ -471,61 +471,101 @@ function gm48_oauth2_networking()
 
 /* --------------------------------
 
-Helper scripts.
+Global helper scripts.
 
 -------------------------------- */
 
-if (! asset_get_index("gm48_debug")) {
-    function gm48_debug()
-    {
-        if (! debug_mode) {
-            return -1
-        }
-
-        if (argument_count == 1) {
-            show_debug_message("gm48: " + string(argument0));
-
-            return;
-        }
-
-        var _string = "",
-            _i = 0;
-
-        repeat(argument_count) {
-            _string += "(" + string(_i) + ") " + string(argument[_i]) + "\n";
-
-            ++_i;
-        }
-
-        show_debug_message("gm48:\n" + _string);
+function gm48_debug()
+{
+    if (! debug_mode) {
+        return -1
     }
+
+    if (argument_count == 1) {
+        show_debug_message("gm48: " + string(argument0));
+
+        return;
+    }
+
+    var _string = "",
+        _i = 0;
+
+    repeat(argument_count) {
+        _string += "(" + string(_i) + ") " + string(argument[_i]) + "\n";
+
+        ++_i;
+    }
+
+    show_debug_message("gm48:\n" + _string);
 }
 
-if (! asset_get_index("gm48_string_random")) {
-	function gm48_string_random(length)
-	{
-	    var charset,
-			result,
-			charsetLength;
-
-	  	result = "";
-
-	    charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	    charsetLength = string_length(charset);
-
-	    repeat (charsetLength) {
-			result += string_char_at(charset, floor(random(charsetLength)) + 1);
-		}
-
-	    return result;
-	}
+function gm48_get_game_api_token()
+{
+    return global.gm48_game_api_token;
 }
 
-if (! asset_get_index("gm48_nonce")) {
-	function gm48_nonce()
-	{
-		return gm48_string_random(64);
-	}
+function gm48_set_game_api_token(apiToken)
+{
+    global.gm48_game_api_token = string(apiToken);
+}
+
+function gm48_isset_game_api_token()
+{
+    return is_string(global.gm48_game_api_token);
+}
+
+function gm48_get_oauth2_access_token()
+{
+    return global.gm48_oauth2_access_token;
+}
+
+function gm48_set_oauth2_access_token(accessToken)
+{
+    global.gm48_oauth2_access_token = string(accessToken);
+}
+
+function gm48_isset_oauth2_access_token()
+{
+    return is_string(global.gm48_oauth2_access_token);
+}
+
+/* --------------------------------
+
+Local helper scripts.
+
+-------------------------------- */
+
+function gm48_add_oauth2_request(requestId, request)
+{
+    return ds_map_add(global.gm48_oauth2_requests, requestId, request);
+}
+
+function gm48_get_oauth2_request(requestId)
+{
+    return ds_map_find_value(global.gm48_oauth2_requests, requestId);
+}
+
+function gm48_string_random(length)
+{
+    var charset,
+        result,
+        charsetLength;
+
+    result = "";
+
+    charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    charsetLength = string_length(charset);
+
+    repeat (charsetLength) {
+        result += string_char_at(charset, floor(random(charsetLength)) + 1);
+    }
+
+    return result;
+}
+
+function gm48_nonce()
+{
+    return gm48_string_random(64);
 }
 
 /// string_parse(str,token,ignore)
