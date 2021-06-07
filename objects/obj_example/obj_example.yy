@@ -1,7 +1,7 @@
 {
   "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,
@@ -23,6 +23,7 @@
     {"isDnD":false,"eventNum":13,"eventType":10,"collisionObjectId":null,"parent":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":68,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":62,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
