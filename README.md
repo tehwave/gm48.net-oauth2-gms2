@@ -48,7 +48,7 @@ gm48_oauth2_networking();
 
 Download the repository and open the project file in GameMaker Studio 2.
 
-The project will not work out-of-the-box, as the Client ID and Secret credentials provided are not real.
+The project will work out-of-the-box, as the Client ID and Secret credentials provided are working, but attached to a fake game.
 
 ### Why is YYC (YoYo Compiler) required?
 
