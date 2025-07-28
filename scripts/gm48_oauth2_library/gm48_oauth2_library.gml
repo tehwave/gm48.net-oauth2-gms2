@@ -252,9 +252,46 @@ function gm48_oauth2_refresh_access_token()
     return requestId;
 }
 
-function gm48_oauth2_authenticated_user()
+function gm48_oauth2_authenticated_user(callback)
 {
-    // TODO
+	// Sanity check.
+    if (global.gm48_oauth2_state != GM48_OAUTH2_STATE.ACCESS_TOKEN_RECEIVED) {
+        show_error("gm48.net-oauth2-gms2: Cannot retrieve authenticated user information right now", true);
+    }
+
+    if (is_undefined(global.gm48_oauth2_access_token)) {
+        show_error("gm48.net-oauth2-gms2: No access token available", true);
+    }
+
+    gm48_debug("Retrieving authenticated user information");
+
+	// Prepare our request.
+    var headers = ds_map_create();
+    headers[? "User-Agent"] = GM48_OAUTH2_USERAGENT;
+    headers[? "Accept"] = "application/json";
+    headers[? "Authorization"] = "Bearer " + global.gm48_oauth2_access_token;
+
+	// Send the request.
+    var requestId = http_request("https://gm48.net/api/v4/user/me", "GET", headers, "");
+
+	// Save the request.
+	var request = ds_map_create();
+	request[? "url"] = "https://gm48.net/api/v4/user/me";
+	request[? "headers"] = headers;
+	request[? "body"] = "";
+	request[? "method"] = "GET";
+	request[? "callback"] = callback;
+
+	gm48_add_oauth2_request(requestId, request);
+
+	// Update our step in the process.
+    global.gm48_oauth2_state = GM48_OAUTH2_STATE.OPERATION_PENDING;
+
+	// Free memory.
+    ds_map_destroy(headers);
+
+	// All done here.
+    return requestId;
 }
 
 /* --------------------------------
