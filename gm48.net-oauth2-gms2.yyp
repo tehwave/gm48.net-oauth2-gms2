@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"scr_callback_example","path":"scripts/scr_callback_example/scr_callback_example.yy",},"order":1,},
+    {"id":{"name":"scr_user_callback_example","path":"scripts/scr_user_callback_example/scr_user_callback_example.yy",},"order":2,},
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"order":0,},
     {"id":{"name":"gm48_oauth2_library","path":"scripts/gm48_oauth2_library/gm48_oauth2_library.yy",},"order":0,},
     {"id":{"name":"room_example","path":"rooms/room_example/room_example.yy",},"order":0,},
