@@ -80,11 +80,17 @@ You must use the token for authentication to the gm48.net API. The official libr
 
 ### Retrieving information about the authenticated user
 
-The authenticated user information is available via an GET request to `https://gm48.net/api/v4/user/me`.
+The authenticated user information is available via a GET request to `https://gm48.net/api/v4/user/me`.
 
-This library does not currently have any functionality out-of-the-box to help you retrieve this information.
+You can retrieve this information using the provided `gm48_oauth2_authenticated_user` function:
 
-That's on the 📝 TODO list.
+```gml
+gm48_oauth2_authenticated_user(callback);
+```
+
+You must provide a script resource to execute when the user information has been retrieved.
+
+See the [`scr_user_callback_example`](scripts/scr_user_callback_example/scr_user_callback_example.gml) script resource provided for an example.
 
 ### Scores & Leaderboards
 
